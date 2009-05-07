@@ -26,6 +26,10 @@
 # - omap-bridge		- TI's dspbridge
 # - omap-omx		- TI's OpenMAX IL
 # - omap-gst		- TI's GStreamer plug-ins
+# - omap-sn		- TI's Socket Nodes
+# - omap-conn		- TI's Connectivity
+# - omap-test		- TI's Test
+# - omap-gfx		- TI's Graphics 
 #
 
 POKY_BASE_INSTALL = '\
