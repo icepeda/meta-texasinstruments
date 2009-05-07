@@ -2,9 +2,9 @@ PRIORITY = "optional"
 DESCRIPTION = "Texas Instruments MPU/DSP Bridge Socket Node compilation."
 LICENSE = "LGPL"
 PR = "r1"
-DEPENDS = "tidspbridge-bios-native \
-	   tidspbridge-cgt6x-native \
-	   tidspbridge-dllcreate-native"
+DEPENDS = "tidspbridge-bios \
+	   tidspbridge-cgt6x \
+	   tidspbridge-dllcreate"
 FILES_${PN}="/dspbridge"
 
 CCASE_SPEC = "%\
