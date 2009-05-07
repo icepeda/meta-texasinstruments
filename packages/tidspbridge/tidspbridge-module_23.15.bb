@@ -10,7 +10,7 @@ PARALLEL_MAKE = "-j1"
 
 inherit module ccasefetch
 
-SRC_URI = "file://23.12-mkcross-driver.patch;patch=1"
+SRC_URI = "file://23.15-mkcross-driver.patch;patch=1"
 
 #SRC_URI = "\
 #	file://23.12-mpu-driver-armv7a.patch;patch=1 \
