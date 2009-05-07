@@ -2,11 +2,11 @@
 # across the TI Linux distribution.
 #
 # Possible features are:
-# * 720p	- Enable 720p OpenMAX components, kernel.
-# * gfx		- Include 3D GFX module and libraries.
-# * tiwifi	- Include support for TI's WLAN stack.
-# * tibluetooth	- Include support for TI's Bluetooth and FM stack.
-# * rarv        - Enable readaudio/realvideo codecs
+# * 720p	 - Enable 720p OpenMAX components, kernel.
+# * gfx		 - Include 3D GFX module and libraries.
+# * tiwifi	 - Include support for TI's WLAN stack.
+# * tibluetooth	 - Include support for TI's Bluetooth and FM stack.
+# * rarv         - Enable readaudio/realvideo
 # * testpatterns - Include OMX test patterns
 
 #DISTRO_FEATURES += "gfx tiwifi tibluetooth"
