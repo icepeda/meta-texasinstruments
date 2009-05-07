@@ -2,15 +2,14 @@ SECTION = "bootloaders"
 PRIORITY = "optional"
 DESCRIPTION = "Texas Instruments X-Loader boot utility"
 LICENSE = "GPL"
-PR="r1"
+PR="r0"
 DEPENDS="u-boot"
 
 inherit ccasefetch
 
 CCASE_SPEC = "%\
 	element /vobs/wtbu/OMAPSW_L/x-load/...  X-LOAD_RLS_${PV} %\
-	element /vobs/wtbu/OMAPSW_L /main/LATEST %\
-	element * /main/0 %\
+	element * /main/LATEST %\
 	"
 
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_L/x-load"
