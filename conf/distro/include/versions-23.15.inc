@@ -134,7 +134,7 @@ PREFERRED_VERSION_tisocketnode-jpegenc =		"3.02"
 PREFERRED_VERSION_tisocketnode-jpegenc-codec =		"3.02"
 
 # openmax
-#PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax"
+#PREFERRED_PROVIDER_virtual/openmax-il =	"meta-tiopenmax"
 PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-complete"
 PREFERRED_VERSION_tiopenmax =			"3.21"
 PREFERRED_VERSION_tiopenmax-core =		"3.21"
