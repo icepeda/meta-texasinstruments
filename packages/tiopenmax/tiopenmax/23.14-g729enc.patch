@@ -1,0 +1,19 @@
+diff -Naur linux.orig/audio/src/openmax_il/g729_enc/src/OMX_G729Enc_Utils.c linux/audio/src/openmax_il/g729_enc/src/OMX_G729Enc_Utils.c
+--- linux.orig/audio/src/openmax_il/g729_enc/src/OMX_G729Enc_Utils.c	2008-10-17 13:45:08.000000000 -0500
++++ linux/audio/src/openmax_il/g729_enc/src/OMX_G729Enc_Utils.c	2008-11-12 02:11:15.000000000 -0600
+2069c2069
+< #endif                    
+---
+>                     
+2076c2076
+< #ifdef __PERF_INSTRUMENTATION__            
+---
+>             
+2079c2079
+< #endif                                       
+---
+>                                        
+2081c2081
+< 
+---
+> #endif

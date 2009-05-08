@@ -1,0 +1,12 @@
+diff -Naur linux.orig/audio/src/openmax_il/g711_dec/src/OMX_G711Dec_Utils.c linux/audio/src/openmax_il/g711_dec/src/OMX_G711Dec_Utils.c
+--- linux.orig/audio/src/openmax_il/g711_dec/src/OMX_G711Dec_Utils.c	2009-03-10 14:29:39.000000000 -0600
++++ linux/audio/src/openmax_il/g711_dec/src/OMX_G711Dec_Utils.c	2009-04-17 14:10:42.000000000 -0500
+@@ -2209,7 +2209,7 @@
+             }
+         }
+     } else if (event == EMMCodecStrmCtrlAck) {
+-         LCML_DPRINT("%d :: GOT MESSAGE USN_DSPACK_STRMCTRL ----\n",__LINE__);
++
+     }
+      else if(event == EMMCodecProcessingStoped) {
+         G711DEC_DPRINT("pComponentPrivate_CC->bNoIdleOnStop = %d\n",(int)pComponentPrivate_CC->bNoIdleOnStop);

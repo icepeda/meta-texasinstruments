@@ -1,0 +1,12 @@
+diff -Naur linux.orig/audio/src/openmax_il/wma_dec/src/OMX_WmaDec_Utils.c linux/audio/src/openmax_il/wma_dec/src/OMX_WmaDec_Utils.c
+--- linux.orig/audio/src/openmax_il/wma_dec/src/OMX_WmaDec_Utils.c	2009-03-10 14:38:56.000000000 -0600
++++ linux/audio/src/openmax_il/wma_dec/src/OMX_WmaDec_Utils.c	2009-04-17 10:23:25.000000000 -0500
+@@ -2094,7 +2094,7 @@
+     } 
+     else if (event == EMMCodecStrmCtrlAck)
+     {
+-        LCML_DPRINT("%d :: GOT MESSAGE USN_DSPACK_STRMCTRL ----\n",__LINE__);
++
+ #ifdef UNDER_CE 
+         if (args[1] == (void *)USN_STRMCMD_FLUSH)
+         {

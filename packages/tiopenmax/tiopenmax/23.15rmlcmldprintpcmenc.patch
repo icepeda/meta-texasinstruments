@@ -1,0 +1,21 @@
+diff -Naur linux.orig/audio/src/openmax_il/pcm_enc/src/OMX_PcmEnc_Utils.c linux/audio/src/openmax_il/pcm_enc/src/OMX_PcmEnc_Utils.c
+--- linux.orig/audio/src/openmax_il/pcm_enc/src/OMX_PcmEnc_Utils.c	2009-03-10 14:29:39.000000000 -0600
++++ linux/audio/src/openmax_il/pcm_enc/src/OMX_PcmEnc_Utils.c	2009-04-17 14:10:42.000000000 -0500
+@@ -1664,9 +1664,6 @@
+ 		}
+ 		pComponentPrivate_CC->bNoIdleOnStop= OMX_FALSE;
+     }
+-    else if(event == EMMCodecAlgCtrlAck) {
+-        LCML_DPRINT("GOT MESSAGE USN_DSPACK_ALGCTRL \n");
+-    }
+     else if (event == EMMCodecDspError) {
+ #ifdef _ERROR_PROPAGATION__
+ 		/* Cheking for MMU_fault */
+@@ -1707,7 +1704,6 @@
+         }
+     }
+     else if (event == EMMCodecStrmCtrlAck) { 	
+-        LCML_DPRINT("%d :: GOT MESSAGE USN_DSPACK_STRMCTRL ----\n",__LINE__);
+ 		pComponentPrivate_CC->bStreamCtrlCalled = 1;
+ 		if (args[1] == (void *)USN_STRMCMD_FLUSH) {
+             pHandle = pComponentPrivate_CC->pHandle;                              
