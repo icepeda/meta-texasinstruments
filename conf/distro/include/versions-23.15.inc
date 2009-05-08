@@ -146,7 +146,7 @@ PREFERRED_VERSION_tiopenmax-audiomanager =	"3.21"
 PREFERRED_VERSION_tiopenmax-resourcemanager =	"3.21"
 PREFERRED_VERSION_tiopenmax-jpegdec =		"3.21"
 PREFERRED_VERSION_tiopenmax-jpegenc =		"3.21"
-PREFERRED_VERSION_mm-isp =			"1.15"
+PREFERRED_VERSION_mm-isp =			"1.14"
 
 # gstreamer
 PREFERRED_VERSION_libgoo =		"5.15"
