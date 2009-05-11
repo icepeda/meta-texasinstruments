@@ -13,18 +13,7 @@ CCASE_PATHCOMPONENTS = "5"
 
 SRC_URI = "file://DLLcreate.patch;patch=1"
 
-<<<<<<< HEAD:packages/tidspbridge/tidspbridge-dllcreate_23.11.bb
 inherit ccasefetch
-=======
-S = ${WORKDIR}/${PN}-${PV}
-
-inherit ccasefetch native
-
-# DLLcreate is not portable to 64bit environment, so force it to
-# be built as a 32bit executable, even if we are using an x86_64
-# machine to build:
-export GCC = "gcc -m32"
->>>>>>> 626de0bae71d3609336726cc4095b4834faeed58:packages/tidspbridge/tidspbridge-dllcreate-native_23.11.bb
 
 do_compile() {
 	cd DLLcreate
