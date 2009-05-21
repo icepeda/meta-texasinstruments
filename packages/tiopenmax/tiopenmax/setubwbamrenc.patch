@@ -1,0 +1,12 @@
+diff -Naur linux.orig/audio/src/openmax_il/wbamr_enc/tests/WbAmrEncTest.c linux/audio/src/openmax_il/wbamr_enc/tests/WbAmrEncTest.c
+--- linux.orig/audio/src/openmax_il/wbamr_enc/tests/WbAmrEncTest.c	2009-03-10 14:38:49.000000000 -0600
++++ linux/audio/src/openmax_il/wbamr_enc/tests/WbAmrEncTest.c	2009-04-20 21:13:17.000000000 -0500
+@@ -132,7 +132,7 @@
+ 
+ #undef APP_DEBUG
+ 
+-#undef USE_BUFFER
++#define USE_BUFFER
+ 
+ #undef APP_MEMCHECK
+ 

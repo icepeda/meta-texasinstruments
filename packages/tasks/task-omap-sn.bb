@@ -59,6 +59,8 @@ RDEPENDS = "\
     tisocketnode-ringio \
     ${@base_contains("DISTRO_FEATURES", "rarv", "tisocketnode-rv89combodec", "", d)} \
     \
+    tisocketnode-pplib \
+    tisocketnode-conversions \
     tisocketnode-jpegdec \
     tisocketnode-jpegenc \
     \

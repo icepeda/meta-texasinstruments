@@ -1,0 +1,12 @@
+diff -Naur linux.orig/audio/src/openmax_il/mp3_dec/tests/Mp3DecTest.c linux/audio/src/openmax_il/mp3_dec/tests/Mp3DecTest.c
+--- linux.orig/audio/src/openmax_il/mp3_dec/tests/Mp3DecTest.c	2009-03-10 14:35:48.000000000 -0600
++++ linux/audio/src/openmax_il/mp3_dec/tests/Mp3DecTest.c	2009-04-20 21:18:24.000000000 -0500
+@@ -116,7 +116,7 @@
+ #define newfree(z) free(z)
+ #endif
+ 
+-#undef USE_BUFFER
++#define USE_BUFFER
+ 
+ #ifdef APP_DEBUG
+     #define APP_DPRINT(...)    fprintf(stderr,__VA_ARGS__)

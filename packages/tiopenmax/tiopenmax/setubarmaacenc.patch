@@ -1,0 +1,12 @@
+diff -Naur linux.orig/audio/src/openmax_il/armaac_enc/tests/ArmAacEncTest.c linux/audio/src/openmax_il/armaac_enc/tests/ArmAacEncTest.c
+--- linux.orig/audio/src/openmax_il/armaac_enc/tests/ArmAacEncTest.c	2009-03-10 14:29:33.000000000 -0600
++++ linux/audio/src/openmax_il/armaac_enc/tests/ArmAacEncTest.c	2009-04-20 20:42:48.000000000 -0500
+@@ -56,7 +56,7 @@
+ #define APP_INFO
+ #define APP_ERROR
+ #define DASF
+-#undef USE_BUFFER
++#define USE_BUFFER
+ #undef ARMAACENC_DEBUGMEM 
+ 
+ /*#define GT_PERFM  *//*Defines the Performance and measurements mode*/
