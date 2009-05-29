@@ -1,0 +1,19 @@
+--- tiopenmax-videoencoder-3.22.orig/video/src/openmax_il/video_encode/src/Makefile	2008-10-22 20:54:01.000000000 -0500
++++ tiopenmax-videoencoder-3.22/video/src/openmax_il/video_encode/src/Makefile	2009-05-26 20:23:34.000000000 -0500
+@@ -32,7 +32,6 @@
+     CFLAGS += -DRESOURCE_MANAGER_ENABLED
+ endif
+ 
+-OMXCORE_LIB=$(OMXLIBDIR)/libOMX_Core.so 
+ COMPONENT_LIB=libOMX.TI.Video.encoder.so
+ 
+ #COMPONENT_LIB=libOMX_VideoEncoder.so
+@@ -41,7 +40,7 @@
+ 
+ all install:: $(COMPONENT_TARGET)
+ 
+-omxcore $(COMPONENT_TARGET): $(COMPONENT_LIB) $(OMXLIBDIR) $(OMXCORE_LIB)
++$(COMPONENT_TARGET): $(COMPONENT_LIB) $(OMXLIBDIR)
+ 	@echo "Installing $(COMPONENT_LIB)"
+ 	cp -f $(COMPONENT_LIB) $(COMPONENT_TARGET)
+ 

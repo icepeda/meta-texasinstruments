@@ -1,0 +1,11 @@
+--- tiopenmax-gsmfrdec-3.22.orig/audio/src/openmax_il/gsmfr_dec/Makefile	2008-01-14 09:07:19.000000000 -0600
++++ tiopenmax-gsmfrdec-3.22/audio/src/openmax_il/gsmfr_dec/Makefile	2009-05-25 13:55:51.000000000 -0500
+@@ -7,7 +7,7 @@
+ 
+ DIRS= \
+ 	src \
+-	inc \
++#	inc \
+ 	tests \
+ 	docs \
+ 	patterns

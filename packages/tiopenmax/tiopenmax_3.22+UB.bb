@@ -3,26 +3,7 @@ DESCRIPTION = "Texas Instruments OpenMAX IL."
 PR = "r1"
 PACKAGES = "${PN}-dbg ${PN}-dev ${PN}-patterns ${PN}"
 
-CCASE_SPEC = "\
-	# OMX Audio%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/audio/... LINUX-MMAUDIO_RLS_${PV}%\
-	# OMX Video%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/video/... ACT_PREREL-VIDEO-L23.16%\
-	# OMX Image%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/image/... ACT_PREREL-IMAGE-L23.16%\
-	# LCML & core%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/system/src/openmax_il/lcml/... LINUX-MMSYSTEM_RLS_3.20%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/system/... LINUX-MMSYSTEM_RLS_${PV}%\
-	# OMX Application%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/application/... ACT_PREREL-APP-L23.16%\
-	# OMX INST2 utilities%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/utilities/src/inst2/... LINUX-MMUTILS_RLS_3.02%\
-	# ROOT folder & Make files%\
-	element /vobs/wtbu/OMAPSW_MPU/linux/... LINUX-MMROOT_RLS_3.20%\
-	\
-	element * /main/LATEST%\
-	"
-
+require tiopenmax-cspec-3.22.inc
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_MPU/linux"
 CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"

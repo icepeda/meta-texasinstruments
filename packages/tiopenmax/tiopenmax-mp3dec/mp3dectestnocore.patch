@@ -1,0 +1,19 @@
+--- tiopenmax-mp3dec-3.22.orig/audio/src/openmax_il/mp3_dec/tests/Makefile	2008-10-08 12:25:29.000000000 -0500
++++ tiopenmax-mp3dec-3.22/audio/src/openmax_il/mp3_dec/tests/Makefile	2009-05-25 15:13:46.000000000 -0500
+@@ -40,7 +40,6 @@
+     CFLAGS += -DDSP_RENDERING_ON
+ endif
+ 
+-OMXCORE_LIB=$(OMXLIBDIR)/libOMX_Core.so
+ OMXRMPROXY_LIB=$(OMXLIBDIR)/libOMX_ResourceManagerProxy.so
+ COMPONENT_TEST=Mp3DecoderTest
+ 
+@@ -48,7 +47,7 @@
+ 
+ all install:: $(COMPONENT_TARGET)
+ 
+-omxcore $(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR) $(OMXCORE_LIB)  
++$(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR)
+ 	@echo "Installing $(COMPONENT_TEST)"
+ 	cp -f $(COMPONENT_TEST) $(COMPONENT_TARGET)
+ 

@@ -1,0 +1,10 @@
+--- tiopenmax-aacenc-3.22.orig/audio/src/openmax_il/aac_enc/Makefile	2007-07-05 18:24:34.000000000 -0500
++++ tiopenmax-aacenc-3.22/audio/src/openmax_il/aac_enc/Makefile	2009-05-22 18:04:33.000000000 -0500
+@@ -7,7 +7,6 @@
+ 
+ DIRS= \
+ 	src \
+-	inc \
+ 	tests \
+ 	docs \
+ 	patterns 

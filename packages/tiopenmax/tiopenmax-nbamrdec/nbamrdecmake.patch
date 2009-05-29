@@ -1,0 +1,11 @@
+--- tiopenmax-nbamrdec-3.22.orig/audio/src/openmax_il/nbamr_dec/Makefile	2007-07-05 18:25:39.000000000 -0500
++++ tiopenmax-nbamrdec-3.22/audio/src/openmax_il/nbamr_dec/Makefile	2009-05-25 15:37:38.000000000 -0500
+@@ -7,7 +7,7 @@
+ 
+ DIRS= \
+ 	src \
+-	inc \
++#	inc \
+ 	tests \
+ 	docs \
+ 	patterns

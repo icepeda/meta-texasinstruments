@@ -1,0 +1,18 @@
+--- tiopenmax-jpegenc-3.22.orig/image/src/openmax_il/jpeg_enc/src/Makefile	2009-04-15 07:32:44.000000000 -0500
++++ tiopenmax-jpegenc-3.22/image/src/openmax_il/jpeg_enc/src/Makefile	2009-05-25 16:59:35.000000000 -0500
+@@ -29,14 +29,13 @@
+     CFLAGS += -D__JPEG_OMX_PPLIB_ENABLED__
+ endif
+ 
+-OMXCORE_LIB=$(OMXLIBDIR)/libOMX_Core.so
+ COMPONENT_LIB=libOMX.TI.JPEG.encoder.so
+ 
+ COMPONENT_TARGET=$(OMXLIBDIR)/$(COMPONENT_LIB)
+ 
+ all install:: $(COMPONENT_TARGET)
+ 
+-omxcore $(COMPONENT_TARGET): $(COMPONENT_LIB) $(OMXLIBDIR) $(OMXCORE_LIB)
++$(COMPONENT_TARGET): $(COMPONENT_LIB) $(OMXLIBDIR)
+ 	@echo "Installing $(COMPONENT_LIB)"
+ 	cp -f $(COMPONENT_LIB) $(COMPONENT_TARGET)
+ 

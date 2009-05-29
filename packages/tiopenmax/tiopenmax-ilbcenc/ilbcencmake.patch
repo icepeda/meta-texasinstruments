@@ -1,0 +1,11 @@
+--- tiopenmax-ilbcenc-3.22.orig/audio/src/openmax_il/ilbc_enc/Makefile	2008-02-25 21:47:04.000000000 -0600
++++ tiopenmax-ilbcenc-3.22/audio/src/openmax_il/ilbc_enc/Makefile	2009-05-25 14:59:29.000000000 -0500
+@@ -7,7 +7,7 @@
+ 
+ DIRS= \
+ 	src \
+-	inc \
++#	inc \
+ 	tests \
+ 	docs \
+ 	patterns

@@ -1,0 +1,19 @@
+--- tiopenmax-nbamrdec-3.22.orig/audio/src/openmax_il/nbamr_dec/tests/Makefile	2008-07-25 14:23:08.000000000 -0500
++++ tiopenmax-nbamrdec-3.22/audio/src/openmax_il/nbamr_dec/tests/Makefile	2009-05-25 15:38:29.000000000 -0500
+@@ -37,7 +37,6 @@
+     CFLAGS += -DDSP_RENDERING_ON
+ endif
+ 
+-OMXCORE_LIB=$(OMXLIBDIR)/libOMX_Core.so
+ OMXRMPROXY_LIB=$(OMXLIBDIR)/libOMX_ResourceManagerProxy.so
+ COMPONENT_TEST=AmrDecTest_common
+ 
+@@ -45,7 +44,7 @@
+ 
+ all install:: $(COMPONENT_TARGET)
+ 
+-omxcore $(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR) $(OMXCORE_LIB)  
++$(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR)
+ 	@echo "Installing $(COMPONENT_TEST)"
+ 	cp -f $(COMPONENT_TEST) $(COMPONENT_TARGET)
+ 

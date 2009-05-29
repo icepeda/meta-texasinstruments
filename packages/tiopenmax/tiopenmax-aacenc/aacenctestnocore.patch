@@ -1,0 +1,11 @@
+--- tiopenmax-aacenc-3.22.orig/audio/src/openmax_il/aac_enc/tests/Makefile	2008-07-25 14:20:49.000000000 -0500
++++ tiopenmax-aacenc-3.22/audio/src/openmax_il/aac_enc/tests/Makefile	2009-05-22 18:06:15.000000000 -0500
+@@ -46,7 +46,7 @@
+ 
+ all install:: $(COMPONENT_TARGET)
+ 
+-omxcore $(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR) $(OMXCORE_LIB)  
++$(COMPONENT_TARGET): $(OMXTESTDIR) $(COMPONENT_TEST) $(OMXLIBDIR)
+ 	@echo "Installing $(COMPONENT_TEST)"
+ 	cp -f $(COMPONENT_TEST) $(COMPONENT_TARGET)
+ 
