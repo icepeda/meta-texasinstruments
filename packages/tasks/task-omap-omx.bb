@@ -78,6 +78,7 @@ RDEPENDS_task-omap-omx-libs = "\
 	"
 
 RDEPENDS_task-omap-omx-utils = "\
+	tiopenmax-khronos \
 	"
 
 RDEPENDS_task-omap-omx-apps = "\

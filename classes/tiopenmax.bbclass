@@ -5,9 +5,12 @@ ENV_VAR = "PREFIX=${D} PKGDIR=${S} \
 	RAPARSERINCLUDEDIR=${STAGING_INCDIR}/omx RVPARSERINCLUDEDIR=${STAGING_INCDIR}/omx \
 	"
 
+inherit pkgconfig
+
 do_compile() {
 	oe_runmake ${ENV_VAR} \
 		TARGETDIR=${STAGING_INCDIR}/../ OMXROOT=${S} \
+		SYSTEMINCLUDEDIR=${STAGING_INCDIR}/omx \ 
 		${OMX_COMPONENT}
 }
 

@@ -17,5 +17,6 @@ OMX_COMPONENT = "common"
 inherit tiopenmax ccasefetch
 
 do_compile_prepend() {
+	install -d ${STAGING_INCDIR}/omx
 	cp ${S}/audio/src/openmax_il/aac_dec/inc/TIDspOmx.h ${STAGING_INCDIR}/omx
 }

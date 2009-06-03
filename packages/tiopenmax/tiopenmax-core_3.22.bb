@@ -13,7 +13,7 @@ CCASE_PATHCOMPONENT = "linux"
 CCASE_PATHCOMPONENTS = 3
 OMX_COMPONENT = "core"
 
-inherit tiopenmax pkgconfig ccasefetch
+inherit tiopenmax ccasefetch
 
 SRC_URI = "file://libomxil-ti.pc"
 
