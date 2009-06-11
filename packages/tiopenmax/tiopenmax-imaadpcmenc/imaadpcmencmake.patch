@@ -1,11 +1,10 @@
 --- tiopenmax-imaadpcmenc-3.22.orig/audio/src/openmax_il/imaadpcm_enc/Makefile	2008-09-10 15:42:33.000000000 -0500
 +++ tiopenmax-imaadpcmenc-3.22/audio/src/openmax_il/imaadpcm_enc/Makefile	2009-05-25 15:06:44.000000000 -0500
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,6 @@
  
  DIRS= \
  	src \
 -	inc \
-+#	inc \
  	tests \
  	patterns
  

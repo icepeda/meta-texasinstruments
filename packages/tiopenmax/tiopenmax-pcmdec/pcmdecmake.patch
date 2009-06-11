@@ -1,11 +1,10 @@
 --- tiopenmax-pcmdec-3.22.orig/audio/src/openmax_il/pcm_dec/Makefile	2007-07-05 18:26:40.000000000 -0500
 +++ tiopenmax-pcmdec-3.22/audio/src/openmax_il/pcm_dec/Makefile	2009-05-25 15:49:10.000000000 -0500
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,6 @@
  
  DIRS= \
  	src \
 -	inc \
-+#	inc \
  	tests \
  	docs \
  	patterns

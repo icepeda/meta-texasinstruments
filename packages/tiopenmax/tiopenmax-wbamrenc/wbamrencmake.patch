@@ -1,11 +1,10 @@
 --- tiopenmax-wbamrenc-3.22.orig/audio/src/openmax_il/wbamr_enc/Makefile	2007-07-05 18:27:55.000000000 -0500
 +++ tiopenmax-wbamrenc-3.22/audio/src/openmax_il/wbamr_enc/Makefile	2009-05-25 16:27:40.000000000 -0500
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,6 @@
  
  DIRS= \
  	src \
 -	inc \
-+#	inc \
  	tests \
  	docs \
  	patterns

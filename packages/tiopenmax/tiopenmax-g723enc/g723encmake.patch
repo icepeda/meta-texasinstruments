@@ -1,11 +1,10 @@
 --- tiopenmax-g723enc-3.22.orig/audio/src/openmax_il/g723_enc/Makefile	2007-12-17 10:54:02.000000000 -0600
 +++ tiopenmax-g723enc-3.22/audio/src/openmax_il/g723_enc/Makefile	2009-05-25 13:01:53.000000000 -0500
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,6 @@
  
  DIRS= \
  	src \
 -	inc \
-+#	inc \
  	tests \
  	docs \
  	patterns
