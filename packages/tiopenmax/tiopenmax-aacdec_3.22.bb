@@ -19,3 +19,8 @@ SRC_URI = "file://aacdecmake.patch;patch=1 \
 	   file://aacdecnocore.patch;patch=1 \
 	   file://aacdectestnocore.patch;patch=1 \
 	   "
+
+do_compile_prepend() {
+	rm ${S}/audio/src/openmax_il/aac_dec/inc/TIDspOmx.h
+	cp -f ${STAGING_INCDIR}/omx/TIDspOmx.h ${S}/audio/src/openmax_il/aac_dec/inc/
+}

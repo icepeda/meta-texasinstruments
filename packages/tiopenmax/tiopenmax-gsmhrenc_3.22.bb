@@ -18,3 +18,8 @@ inherit tiopenmax ccasefetch
 SRC_URI = "file://gsmhrencmake.patch;patch=1 \
 	   file://gsmhrencnocore.patch;patch=1 \
 	   file://gsmhrenctestnocore.patch;patch=1"
+
+do_compile_prepend() {
+	rm ${S}/audio/src/openmax_il/gsmhr_enc/inc/TIDspOmx.h
+	cp -f ${STAGING_INCDIR}/omx/TIDspOmx.h ${S}/audio/src/openmax_il/gsmhr_enc/inc/
+}

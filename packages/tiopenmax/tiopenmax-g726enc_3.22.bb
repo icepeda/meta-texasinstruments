@@ -18,3 +18,8 @@ inherit tiopenmax ccasefetch
 SRC_URI = "file://g726encmake.patch;patch=1 \
 	   file://g726encnocore.patch;patch=1 \
 	   file://g726enctestnocore.patch;patch=1"
+
+do_compile_prepend() {
+	rm ${S}/audio/src/openmax_il/g726_enc/inc/TIDspOmx.h
+	cp -f ${STAGING_INCDIR}/omx/TIDspOmx.h ${S}/audio/src/openmax_il/g726_enc/inc/
+}

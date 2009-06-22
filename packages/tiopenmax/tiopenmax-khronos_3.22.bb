@@ -33,11 +33,7 @@ do_install() {
 	install -d ${D}/omx
 	install -d ${D}/bin
 	install -d ${D}/lib
-	cd ${S}/system/src/openmax_il/khronos
-        make PREFIX=${D} PKGDIR=${D}/ \
-		CROSS=${AR%-*}- \
-		BRIDGEINCLUDEDIR=${STAGING_INCDIR}/dspbridge BRIDGELIBDIR=${STAGING_LIBDIR} \
-		${OMX_COMPONENT}
+	cp -f ${STAGING_INCDIR}/../omx/conftest  ${D}/omx
 }
 
 FILES_${PN} = "\

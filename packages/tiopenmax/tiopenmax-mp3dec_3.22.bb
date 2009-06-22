@@ -18,3 +18,8 @@ inherit tiopenmax ccasefetch
 SRC_URI = "file://mp3decmake.patch;patch=1 \
 	   file://mp3decnocore.patch;patch=1 \
 	   file://mp3dectestnocore.patch;patch=1"
+
+do_compile_prepend() {
+	rm ${S}/audio/src/openmax_il/mp3_dec/inc/TIDspOmx.h
+	cp -f ${STAGING_INCDIR}/omx/TIDspOmx.h ${S}/audio/src/openmax_il/mp3_dec/inc/
+}

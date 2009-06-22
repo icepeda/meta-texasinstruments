@@ -18,3 +18,8 @@ inherit tiopenmax ccasefetch
 SRC_URI = "file://wmadecmake.patch;patch=1 \
 	   file://wmadecnocore.patch;patch=1 \
 	   file://wmadectestnocore.patch;patch=1"
+
+do_compile_prepend() {
+	rm ${S}/audio/src/openmax_il/wma_dec/inc/TIDspOmx.h
+	cp -f ${STAGING_INCDIR}/omx/TIDspOmx.h ${S}/audio/src/openmax_il/wma_dec/inc/
+} 

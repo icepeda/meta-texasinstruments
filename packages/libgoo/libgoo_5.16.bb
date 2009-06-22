@@ -1,5 +1,5 @@
 SECTION = "libs"
-DEPENDS = "glib-2.0 virtual/openmax-il"
+DEPENDS = "glib-2.0 tiopenmax-core"
 DESCRIPTION = "Library for interacting OpenMAX IL."
 LICENSE = "LGPL"
 PR = "r0"
