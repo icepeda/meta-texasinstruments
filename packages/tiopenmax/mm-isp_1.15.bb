@@ -20,9 +20,9 @@ CCASE_PATHCOMPONENTS = 2
 CCASE_PATHCOMPONENT = "OMAPSW_MPU"
 
 SRC_URI="\
-	file://23.11-ippmk.patch;patch=1 \
-	file://23.15-il3pmk.patch;patch=1 \
-	file://23.15-cafmk.patch;patch=1 \
+	file://ippmk.patch;patch=1 \
+	file://il3pmk.patch;patch=1 \
+	file://cafmk.patch;patch=1 \
 	"
 
 inherit ccasefetch
