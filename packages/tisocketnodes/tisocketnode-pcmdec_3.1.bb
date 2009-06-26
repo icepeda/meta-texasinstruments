@@ -2,7 +2,7 @@ DESCRIPTION = "Texas Instruments PCM Decoder Socket Node."
 PR = "r0"
 
 CCASE_SPEC = "%\
-	      element /vobs/wtbu/OMAPSW_DSP/audio/node/pcm/dec/... DSP-MM-TII-MM_RLS_${PV}%\
+	      element /vobs/wtbu/OMAPSW_DSP/audio/node/pcm/dec/... DSP-MM-TII_RLS_${PV}%\
 	      element * /main/LATEST%"
 
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_DSP/audio/node/pcm/dec"

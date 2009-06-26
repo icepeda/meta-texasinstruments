@@ -69,4 +69,5 @@ RDEPENDS = "\
 DEPENDS = "\
     tisocketnode-algo \
     tisocketnode-nmu-plc-vad \
+    tisocketnode-vgpop \
     "

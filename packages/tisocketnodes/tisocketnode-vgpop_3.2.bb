@@ -1,10 +1,9 @@
-PRIORITY = "optional"
-DESCRIPTION = "Texas Instruments MPU/DSP Bridge Socket Node compilation."
+DESCRIPTION = "Texas Instruments VGPOP Socket Node."
 LICENSE = "LGPL"
-PR = "r0"
+PR = "r1"
 
 CCASE_SPEC = "%\
-	      element /vobs/wtbu/OMAPSW_DSP/video/alg/vgpop/... DSP-MM-TII-IMVID_RLS_${PV}%\
+	      element /vobs/wtbu/OMAPSW_DSP/video/alg/vgpop/... DSP-MM-TII_RLS_${PV}%\
 	      element * /main/LATEST%"
 
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_DSP/video/alg/vgpop"
@@ -12,9 +11,6 @@ CCASE_PATHCOMPONENT = "vgpop"
 CCASE_PATHCOMPONENTS = "5"
 
 inherit ccasefetch
-
-do_compile() {
-}
 
 do_stage() {
         chmod -R +w ${S}/*

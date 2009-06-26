@@ -17,8 +17,8 @@
  	cp -f $(COMPONENT_TEST) $(COMPONENT_TARGET)
  
  $(COMPONENT_TEST): $(OBJ)
--	$(CROSS)gcc $(CFLAGS) -o $(COMPONENT_TEST) $(OBJ) -L$(OMXLIBDIR) -lbridge -lOMX_Core  
-+	$(CROSS)gcc $(CFLAGS) -o $(COMPONENT_TEST) $(OBJ) -L$(OMXLIBDIR) -L$(BRIDGELIBDIR) -lbridge -lpthread -lOMX_Core
+-	$(CROSS)gcc $(CFLAGS) -o $(COMPONENT_TEST) $(OBJ) -L$(OMXLIBDIR) -lbridge -lOMX_Core -lpthread 
++	$(CROSS)gcc $(CFLAGS) -o $(COMPONENT_TEST) $(OBJ) -L$(OMXLIBDIR) -L$(BRIDGELIBDIR) -lbridge -lpthread -lOMX_Core 
  
  $(SRC): $(HSRC)
  

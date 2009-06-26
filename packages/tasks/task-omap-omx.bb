@@ -59,7 +59,7 @@ RDEPENDS_task-omap-omx-libs = "\
 	tiopenmax-nbamrenc \
 	tiopenmax-pcmdec \
 	tiopenmax-pcmenc \
-	tiopenmax-rageckodec \
+	${@base_contains("DISTRO_FEATURES", "rarv", "tiopenmax-rageckodec", "", d)} \
 	tiopenmax-wbamrdec \
 	tiopenmax-wbamrenc \
 	tiopenmax-wmadec \
@@ -72,7 +72,7 @@ RDEPENDS_task-omap-omx-libs = "\
 	tiopenmax-prepostprocessor \
 	tiopenmax-rmparser \
 	tiopenmax-rmrvparser \
-	tiopenmax-rvdecoder \
+	${@base_contains("DISTRO_FEATURES", "rarv", "tiopenmax-rvdecoder", "", d)} \
 	tiopenmax-videodecoder \
 	tiopenmax-videoencoder \
 	"

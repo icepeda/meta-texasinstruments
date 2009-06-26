@@ -7,7 +7,6 @@
 # * tiwifi	 - Include support for TI's WLAN stack.
 # * tibluetooth	 - Include support for TI's Bluetooth and FM stack.
 # * rarv         - Enable readaudio/realvideo
-# * testpatterns - Include OMX test patterns
 
 # The following are standard Poky DISTRO_FEATURES, not specific to
 # OMAP.  Do not touch these unless you know what you are doing.
