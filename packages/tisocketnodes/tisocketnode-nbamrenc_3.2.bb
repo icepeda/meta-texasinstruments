@@ -3,7 +3,7 @@ PR = "r0"
 DEPENDS += "tisocketnode-nbamrenc-codec"
 
 CCASE_SPEC = "%\
-	      element /vobs/wtbu/OMAPSW_DSP/speech/node/nbamr/enc/... DSP-MM-TII-MM_RLS_${PV}%\
+	      element /vobs/wtbu/OMAPSW_DSP/speech/node/nbamr/enc/... DSP-MM-TII_RLS_${PV}%\
 	      element * /main/LATEST%"
 
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_DSP/speech/node/nbamr/enc"
