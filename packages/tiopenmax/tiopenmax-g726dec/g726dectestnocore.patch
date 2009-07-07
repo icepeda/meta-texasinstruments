@@ -1,5 +1,14 @@
 --- tiopenmax-g726dec-3.22.orig/audio/src/openmax_il/g726_dec/tests/Makefile	2008-07-25 14:21:42.000000000 -0500
 +++ tiopenmax-g726dec-3.22/audio/src/openmax_il/g726_dec/tests/Makefile	2009-05-25 13:16:33.000000000 -0500
+@@ -17,7 +17,7 @@
+ 
+ include $(OMXROOT)/Master.mk
+ 
+-CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -ansi -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH 
++CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH 
+ ifeq ($(OMX_DEBUG), 1)
+     CFLAGS += -O0
+ else
 @@ -36,7 +36,6 @@
      CFLAGS += -DDSP_RENDERING_ON
  endif

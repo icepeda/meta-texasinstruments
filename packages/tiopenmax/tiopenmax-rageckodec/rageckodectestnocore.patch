@@ -1,5 +1,14 @@
 --- tiopenmax-rageckodec-3.22.orig/audio/src/openmax_il/ragecko_dec/tests/Makefile	2009-01-23 13:08:53.000000000 -0600
 +++ tiopenmax-rageckodec-3.22/audio/src/openmax_il/ragecko_dec/tests/Makefile	2009-05-25 16:15:47.000000000 -0500
+@@ -13,7 +13,7 @@
+ 
+ include $(OMXROOT)/Master.mk
+ 
+-CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(RAPARSERINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -Wall -ansi -fpic -pipe -DOMAP_2430 -DETEEDN_PATH -DDSP_RENDERING_ON
++CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(RAPARSERINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH -DDSP_RENDERING_ON
+ ifeq ($(OMX_DEBUG), 1)
+     CFLAGS += -O0
+ else
 @@ -24,14 +24,13 @@
      CFLAGS += -DOMX_DEBUG=1
  endif
