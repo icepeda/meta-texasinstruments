@@ -6,8 +6,7 @@ PR = "r0"
 COMPATIBLE_MACHINE = "omap-3430(s|l)dp|omap-zoom2-(alpha|beta)"
 
 CCASE_SPEC = "\
-	element /vobs/wtbu/CSSD_L_GIT_2.6/linux/kernel_org/2.6_kernel/... LINUX-GIT-2.6.24K_RLS_5.25-P1%\
-	element /vobs/wtbu/CSSD_L_GIT_2.6/linux/kernel_org/2.6_kernel/... LINUX-GIT-2.6.24K_RLS_5.25%\
+	element /vobs/wtbu/CSSD_L_GIT_2.6/linux/kernel_org/2.6_kernel/... LINUX-GIT-2.6.24K_RLS_5.25-P2%\
 	element * /main/LATEST%\
 	"
 CCASE_PATHFETCH = "/vobs/wtbu/CSSD_L_GIT_2.6/linux/kernel_org/2.6_kernel"
