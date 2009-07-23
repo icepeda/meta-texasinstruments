@@ -1,14 +1,5 @@
 --- tiopenmax-imaadpcmdec-3.22.orig/audio/src/openmax_il/imaadpcm_dec/tests/Makefile	2008-07-30 11:02:27.000000000 -0500
 +++ tiopenmax-imaadpcmdec-3.22/audio/src/openmax_il/imaadpcm_dec/tests/Makefile	2009-05-25 15:04:07.000000000 -0500
-@@ -23,7 +23,7 @@
- 
- include $(OMXROOT)/Master.mk
- 
--CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -ansi -fpic -pipe -DOMAP_2430 -DETEEDN_PATH -DDSP_RENDERING_ON
-+CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH -DDSP_RENDERING_ON
- ifeq ($(OMX_DEBUG), 1)
-     CFLAGS += -O0
- else
 @@ -38,7 +38,6 @@
  	CFLAGS += -DOMX_GETTIME
  endif

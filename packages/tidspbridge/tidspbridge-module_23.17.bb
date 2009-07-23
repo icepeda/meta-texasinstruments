@@ -19,7 +19,7 @@ SRC_URI = "file://23.15-mkcross-driver.patch;patch=1"
 
 CCASE_SPEC = "%\
 	element * COMPONENT_ROOT%\
-	element /vobs/wtbu/OMAPSW_MPU/dspbridge/... L-BRIDGE-MPU_RLS_${PV}%\
+	element /vobs/wtbu/OMAPSW_MPU/dspbridge/... L-BRIDGE-MPU_RLS_${PV}-P2%\
 	element * /main/LATEST%\
 	"
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_MPU/dspbridge"

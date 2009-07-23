@@ -1,14 +1,5 @@
 --- tiopenmax-ilbcdec-3.22.orig/audio/src/openmax_il/ilbc_dec/tests/Makefile	2008-07-25 14:22:41.000000000 -0500
 +++ tiopenmax-ilbcdec-3.22/audio/src/openmax_il/ilbc_dec/tests/Makefile	2009-05-25 14:45:57.000000000 -0500
-@@ -23,7 +23,7 @@
- 
- include $(OMXROOT)/Master.mk
- 
--CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -ansi -fpic -pipe -DOMAP_2430 -DETEEDN_PATH 
-+CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH 
- ifeq ($(OMX_DEBUG), 1)
-     CFLAGS += -O0
- else
 @@ -43,7 +43,6 @@
  endif
  

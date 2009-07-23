@@ -1,14 +1,5 @@
 --- tiopenmax-gsmfrdec-3.22.orig/audio/src/openmax_il/gsmfr_dec/tests/Makefile	2008-07-25 14:22:09.000000000 -0500
 +++ tiopenmax-gsmfrdec-3.22/audio/src/openmax_il/gsmfr_dec/tests/Makefile	2009-05-25 13:56:41.000000000 -0500
-@@ -17,7 +17,7 @@
- 
- include $(OMXROOT)/Master.mk
- 
--CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -ansi -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
-+CFLAGS+=-I../inc -I$(OMXINCLUDEDIR) -I$(SYSTEMINCLUDEDIR) -I$(BRIDGEINCLUDEDIR) -I$(GTTOOLSINCDIR) -Wall -fpic -pipe -DOMAP_2430 -DETEEDN_PATH
- 
- ifeq ($(OMX_DEBUG), 1)
-     CFLAGS += -O0
 @@ -37,7 +37,6 @@
      CFLAGS += -DDSP_RENDERING_ON
  endif

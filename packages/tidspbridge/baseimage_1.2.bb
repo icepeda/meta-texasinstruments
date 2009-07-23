@@ -16,7 +16,7 @@ DEPENDS = "baseimage-avsync \
 FILES_${PN}="${base_libdir}/dsp/baseimage.dof"
  
 CCASE_SPEC = "%\
-   element /vobs/wtbu/OMAPSW_DSP/system/baseimage/... DSP-DASF-SYSTEM_RLS_${PV}%\
+   element /vobs/wtbu/OMAPSW_DSP/system/baseimage/... DSP-DASF-SYSTEM_RLS_${PV}-P2%\
    element * /main/LATEST%"
  
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_DSP/system"

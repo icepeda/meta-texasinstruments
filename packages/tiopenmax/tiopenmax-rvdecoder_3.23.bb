@@ -1,7 +1,7 @@
 DESCRIPTION = "Texas Instruments OpenMAX IL RV Decoder."
-PR = "r1"
+PR = "r2"
 DEPENDS = "tiopenmax-core tiopenmax-audiomanager tiopenmax-resourcemanager tiopenmax-lcml tiopenmax-rmparser tiopenmax-rmrvparser"
-PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
+PACKAGES = "${PN}-dbg ${PN}-dev ${PN}-ptrns ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
 CCASE_PATHFETCH = "\

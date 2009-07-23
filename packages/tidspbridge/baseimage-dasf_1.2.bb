@@ -4,7 +4,7 @@ LICENSE = "LGPL"
 PR = "r0"
 
 CCASE_SPEC = "%\
-	      element /vobs/wtbu/OMAPSW_DSP/system/dasf/... DSP-DASF-SYSTEM_RLS_${PV}%\
+	      element /vobs/wtbu/OMAPSW_DSP/system/dasf/... DSP-DASF-SYSTEM_RLS_${PV}-P2%\
 	      element * /main/LATEST%"
 
 CCASE_PATHFETCH = "/vobs/wtbu/OMAPSW_DSP/system/dasf"

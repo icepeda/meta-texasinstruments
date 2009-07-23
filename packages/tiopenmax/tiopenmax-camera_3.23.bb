@@ -1,7 +1,7 @@
 DESCRIPTION = "Texas Instruments OpenMAX IL Camera."
-PR = "r1"
+PR = "r2"
 DEPENDS = "mm-isp tiopenmax-core tiopenmax-audiomanager tiopenmax-resourcemanager tiopenmax-lcml tiopenmax-clock tiopenmax-postprocessor"
-PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
+PACKAGES = "${PN}-dbg ${PN}-dev ${PN}-ptrns ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
 CCASE_PATHFETCH = "\
