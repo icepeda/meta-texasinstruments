@@ -70,8 +70,8 @@ RDEPENDS_task-omap-omx-libs = "\
 	tiopenmax-camera \
 	tiopenmax-postprocessor \
 	tiopenmax-prepostprocessor \
-	tiopenmax-rmparser \
-	tiopenmax-rmrvparser \
+	${@base_contains("DISTRO_FEATURES", "rarv", "tiopenmax-rmparser", "", d)} \
+	${@base_contains("DISTRO_FEATURES", "rarv", "tiopenmax-rmrvparser", "", d)} \
 	${@base_contains("DISTRO_FEATURES", "rarv", "tiopenmax-rvdecoder", "", d)} \
 	tiopenmax-videodecoder \
 	tiopenmax-videoencoder \
