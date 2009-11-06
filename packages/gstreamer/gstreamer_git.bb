@@ -9,7 +9,7 @@ DEPENDS = "glib-2.0 gettext-native libxml2 bison-native flex-native ${TTIF_DEPEN
 
 inherit autotools pkgconfig
 
-SRC_URI = "git://anongit.freedesktop.org/gstreamer/${PN};protocol=git \
+SRC_URI = "git://cgit.freedesktop.org/gstreamer/${PN};protocol=http \
            file://common-20090928.tar.gz \
            file://buffer-alignment.patch;patch=1 \
 	   file://fixatecapsmultiplestructs.patch;patch=1 \

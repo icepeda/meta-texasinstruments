@@ -13,6 +13,6 @@ SRCREV = "a5e53bd26d8e48d1a2e62c700fa51df917459581"
 
 # override the SRC_URI from gst-plugins-git.inc to pull from our
 # fork (can be removed when jpegparser is integrated upstream):
-SRC_URI = "git://github.com/JJCG/gst-plugins-bad.git;protocol=git;branch=jpegparser3 \
+SRC_URI = "git://github.com/JJCG/gst-plugins-bad.git;protocol=http;branch=jpegparser3 \
 	   file://common-20090928.tar.gz \
 	   "

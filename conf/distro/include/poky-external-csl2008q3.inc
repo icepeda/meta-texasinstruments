@@ -4,9 +4,9 @@
 
 TARGET_VENDOR = "-none"
 
-EXTERNAL_CSL_TOOLCHAIN ?= "/usr/local/csl/arm-2008q3"
+EXTERNAL_CSL_TOOLCHAIN ?= "/data/omapts/linux/arm-tc/cs-arm-2008q3"
 
-PATH =. ":${EXTERNAL_CSL_TOOLCHAIN}/bin:"
+PATH =. "${EXTERNAL_CSL_TOOLCHAIN}/bin:"
 
 PREFERRED_PROVIDER_linux-libc-headers = "external-csl-toolchain"
 PREFERRED_PROVIDER_virtual/arm-none-linux-gnueabi-gcc = "external-csl-toolchain"

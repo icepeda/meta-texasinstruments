@@ -6,8 +6,8 @@ PR = "r0"
 #"
 
 SRC_URI = " \
-${@base_contains("MACHINE", "omap-3630sdp", "git://git.omapzoom.org/repo/u-boot.git;branch=3630v0.1;protocol=git", "", d)} \
-${@base_contains("MACHINE", "zoom3", "git://git.omapzoom.org/repo/u-boot.git;branch=zoom3;protocol=git", "", d)} \
+${@base_contains("MACHINE", "omap-3630sdp", "git://git.omapzoom.org/repo/u-boot.git;branch=3630v0.1;protocol=http", "", d)} \
+${@base_contains("MACHINE", "zoom3", "git://git.omapzoom.org/repo/u-boot.git;branch=zoom3;protocol=http", "", d)} \
 "
  
 COMPATIBLE_MACHINE = "omap-3430(l|s)dp|omap-3630sdp|zoom2|zoom3"

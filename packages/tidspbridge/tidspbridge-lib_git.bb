@@ -19,7 +19,7 @@ S = "${WORKDIR}/git"
 
 PV = "23.0+git+${SRCREV}"
 
-SRC_URI = "git://dev.omapzoom.org/pub/scm/tidspbridge/userspace-dspbridge.git;protocol=git;branch=bridge-2.6.31"
+SRC_URI = "git://dev.omapzoom.org/pub/scm/tidspbridge/userspace-dspbridge.git;protocol=http;branch=bridge-2.6.31"
 
 #SRC_URI += " \
 #	file://23.12-mkcross-api.patch;patch=1 \
