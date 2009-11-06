@@ -1,6 +1,7 @@
 DEPENDS += "baseimage \
 	   tisocketnode-ringio \
-	   tisocketnode-usn"
+	   tisocketnode-usn \
+	   tisocketnode-conversions"
 
 ENV_VAR = "DEPOT=${STAGING_BINDIR_NATIVE}/dspbridge/tools \
            MMCODEC_ROOT=${STAGING_BINDIR}/dspbridge \
@@ -34,8 +35,11 @@ do_compile() {
         mkdir -p ${S}/system/dasf
         cp -a ${STAGING_BINDIR}/dspbridge/system/dasf/* ${S}/system/dasf
 ## Getting ringio files
-	mkdir -p ${S}/system/ringio
-	cp -a ${STAGING_BINDIR}/dspbridge/system/ringio/* ${S}/system/ringio
+		mkdir -p ${S}/system/ringio
+		cp -a ${STAGING_BINDIR}/dspbridge/system/ringio/* ${S}/system/ringio
+## Getting conversions files
+		mkdir -p ${S}/video/lib
+		cp -a ${STAGING_BINDIR}/dspbridge/video/lib/* ${S}/video/lib
 ## Setting PATH for gmake
         pathorig=$PATH
         export PATH=$PATH:${STAGING_BINDIR_NATIVE}/dspbridge/tools/xdctools
