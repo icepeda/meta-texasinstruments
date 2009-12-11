@@ -26,13 +26,14 @@ DISTRO_FEATURES += "camera jpegdec jpegenc"
 DISTRO_FEATURES += "spark"
 
 # Enable 3D GFX module and libraries
-DISTRO_FEATURES += "gfx"
+#DISTRO_FEATURES += "gfx"
 
 # Enable 720p OpenMAX components
 DISTRO_FEATURES += "720p"
 
 # Enable support for TI's WLAN stack, Bluetooth and FM stack
-#DISTRO_FEATURES += "tibluetooth tiwifi"
+DISTRO_FEATURES += "tibluetooth"
+#DISTRO_FEATURES += "tiwifi"
 
 # Enable support for TI's GPS
 #DISTRO_FEATURES += "gps"

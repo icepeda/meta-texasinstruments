@@ -4,10 +4,11 @@ PRIORITY = "optional"
 DEPENDS = "alsa-utils bluez-libs"
 RDEPENDS = "btfm"
 PR = "r0"
+PACKAGES = "${PN}-dbg ${PN}-dev ${PN}"
 
 inherit ccasefetch
 
-COMPATIBLE_MACHINE = "omap-3430(s|l)dp"
+COMPATIBLE_MACHINE = "omap-3430sdp|omap-3430ldp|omap-3630sdp|zoom2|zoom3"
 
 CCASE_SPEC =   "%\
 	element /vobs/WCGDev/... LINUX-WCG-BT_RLS_${PV}%\
@@ -58,6 +59,7 @@ do_compile () {
 		-I ${S}/HSW_FMStack/stack/inc \
 		-I ${STAGING_INCDIR} \
 		-I ${S}/WCGDev/linux/fm_app \
+		-I ${S}/WCGDev/linux/uim \
 		" \
 		SRC_FOLDERS="${S}/MCP_Common/Platform/hw/linux \
 		 ${S}/MCP_Common/Platform/fmhal/os \
@@ -73,13 +75,28 @@ do_compile () {
 		 ${S}/HSW_FMStack/stack/rx \
 		 ${S}/HSW_FMStack/stack/tx \
 		 ${S}/WCGDev/linux/fm_app \
+		 ${S}/WCGDev/linux/uim \
 		 "
 }
 
 do_install() {
 	install -d ${D}${bindir}
-	install -m 0755 ${S}/WCGDev/linux/build/build_directory/fm_app/fmapp \
-	    ${D}${bindir}
+	install -m 0755 ${S}/WCGDev/linux/build/build_directory/fm_app/fmapp ${D}${bindir}
+	install -m 0755 ${S}/WCGDev/linux/build/build_directory/fm_app/uim ${D}${bindir}
 }
+
+FILES_${PN} = "\
+	/usr/lib \
+	/usr/bin \
+	"
+
+FILES_${PN}-dbg = "\
+	/usr/bin/.debug \
+	/usr/lib/.debug \
+	"
+
+FILES_${PN}-dev = "\
+	/usr/include \
+	"
 
 addtask chmod after do_unpack_ccase before do_patch

@@ -6,7 +6,7 @@ PR = "r2"
 
 inherit ccasefetch
 
-COMPATIBLE_MACHINE = "omap-3430(l|s)dp"
+COMPATIBLE_MACHINE = "omap-3430sdp|omap-3430ldp|omap-3630sdp|zoom2|zoom3"
 
 CCASE_SPEC =   "%\
 	element /vobs/WCGDev/... LINUX-WCG-BT_RLS_${PV} %\
