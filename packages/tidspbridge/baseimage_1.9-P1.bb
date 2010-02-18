@@ -8,10 +8,10 @@ DEPENDS = "baseimage-avsync \
    baseimage-inst2 \
    baseimage-samplerateconverter \
    baseimage-tmon \
-   baseimage-vgpop \
    baseimage-make-system \
    baseimage-utils \
    baseimage-masterconfig \
+   tidspbridge-vgpop \
    tidspbridge-samples-dsp \
    "
 FILES_${PN}="\

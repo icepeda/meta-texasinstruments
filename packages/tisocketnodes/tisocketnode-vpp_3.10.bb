@@ -1,6 +1,6 @@
 DESCRIPTION = "Texas Instruments VPP Socket Node."
 PR = "r0"
-DEPENDS += "baseimage-vgpop"
+DEPENDS += "tisocketnode-vgpop"
 
 CCASE_SPEC = "%\
 	      element /vobs/wtbu/OMAPSW_DSP/video/node/vpp/... DSP-MM-TII_RLS_${PV}%\

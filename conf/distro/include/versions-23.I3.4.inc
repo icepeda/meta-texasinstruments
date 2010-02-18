@@ -21,12 +21,12 @@ SRCREV_pn-u-boot ?= "08efda7203696e88f060b0ce8ddf41a8c5fa0e83"
 SRCREV_pn-linux-tiomap ?= "10793f243a6389bb16a8230ae072552d373c03be"
 
 # bridge and friends
-SRCREV_pn-tidspbridge-lib = "85d2b37bb6a7150ba8a642a47a97957a3c411f84"
-SRCREV_pn-tidspbridge-mpusamples = "85d2b37bb6a7150ba8a642a47a97957a3c411f84"
+SRCREV_pn-tidspbridge-lib = 		"85d2b37bb6a7150ba8a642a47a97957a3c411f84"
+SRCREV_pn-tidspbridge-mpusamples = 	"85d2b37bb6a7150ba8a642a47a97957a3c411f84"
 PREFERRED_VERSION_tidspbridge-samples-dsp =		"4.57-P1"
-PREFERRED_VERSION_tidspbridge-extra =		"23.13"
-PREFERRED_VERSION_tidspbridge-cgt6x =		"6.0.7"
-PREFERRED_VERSION_tidspbridge-bios =		"5.33.04"
+PREFERRED_VERSION_tidspbridge-extra =			"23.13"
+PREFERRED_VERSION_tidspbridge-cgt6x =			"6.0.7"
+PREFERRED_VERSION_tidspbridge-bios =			"5.33.04"
 PREFERRED_VERSION_tidspbridge-dllcreate-native =	"1.72"
 
 # baseimage
@@ -41,7 +41,6 @@ PREFERRED_VERSION_baseimage-make-system =               "1.9-P1"
 PREFERRED_VERSION_baseimage-avsync =                    "1.9-P1"
 PREFERRED_VERSION_baseimage-inst2 =                     "1.9-P1"
 PREFERRED_VERSION_baseimage-dasf-system-cspec =		"1.9-P1"
-PREFERRED_VERSION_baseimage-vgpop =			"3.10"
 
 # socket nodes and codecs
 PREFERRED_VERSION_tisocketnode-algo =			"3.10-P1"
@@ -51,6 +50,7 @@ PREFERRED_VERSION_tisocketnode-control-task =		"3.40"
 PREFERRED_VERSION_tisocketnode-vpp =			"3.10"
 PREFERRED_VERSION_tisocketnode-ringio =			"3.10"
 PREFERRED_VERSION_tisocketnode-ipp =                    "3.10"
+PREFERRED_VERSION_tisocketnode-vgpop =			"3.10"
 #
 PREFERRED_VERSION_tisocketnode-mp3 =                    "3.10"
 PREFERRED_VERSION_tisocketnode-mp3-codec =              "3.10"
@@ -120,10 +120,10 @@ PREFERRED_VERSION_tisocketnode-mpeg4-720pdec =          "3.10"
 PREFERRED_VERSION_tisocketnode-mpeg4-720pdec-codec =    "3.10"
 PREFERRED_VERSION_tisocketnode-mpeg4-720penc =          "3.10"
 PREFERRED_VERSION_tisocketnode-mpeg4-720penc-codec =    "3.10"
-PREFERRED_VERSION_tisocketnode-mpeg4-xdm720pdec =          "3.10"
-PREFERRED_VERSION_tisocketnode-mpeg4-xdm720pdec-codec =    "3.10"
-PREFERRED_VERSION_tisocketnode-mpeg4-xdm720penc =          "3.10"
-PREFERRED_VERSION_tisocketnode-mpeg4-xdm720penc-codec =    "3.10"
+PREFERRED_VERSION_tisocketnode-mpeg4-xdm720pdec =       "3.10"
+PREFERRED_VERSION_tisocketnode-mpeg4-xdm720pdec-codec = "3.10"
+PREFERRED_VERSION_tisocketnode-mpeg4-xdm720penc =       "3.10"
+PREFERRED_VERSION_tisocketnode-mpeg4-xdm720penc-codec = "3.10"
 PREFERRED_VERSION_tisocketnode-wmv9 =                   "3.10-P1"
 PREFERRED_VERSION_tisocketnode-wmv9-codec =             "3.10"
 PREFERRED_VERSION_tisocketnode-spark =                  "3.10"
@@ -142,7 +142,7 @@ PREFERRED_VERSION_tisocketnode-mpeg4decitt-codec =	"20100208"
 
 # openmax
 PREFERRED_PROVIDER_virtual/openmax-il =		"meta-tiopenmax-modular"
-#PREFERRED_PROVIDER_virtual/openmax-il =		"tiopenmax"
+#PREFERRED_PROVIDER_virtual/openmax-il =	"tiopenmax"
 PREFERRED_VERSION_tiopenmax =			"3.29-P1"
 PREFERRED_VERSION_tiopenmax-core =		"3.29-P1"
 PREFERRED_VERSION_tiopenmax-clock =		"3.29-P1"
@@ -204,7 +204,7 @@ PREFERRED_VERSION_tiopenmax-videocapturetest =	"3.29-P1"
 PREFERRED_VERSION_mm-isp =			"1.18"
 # Ittiam
 PREFERRED_VERSION_tiopenmax-videodecitt = 	"3.29-P1"
-#PREFERRED_VERSION_tiopenmax-aacdecitt = 	"20100114"
+PREFERRED_VERSION_tiopenmax-aacdecitt = 	"3.29-P1"
 
 # gstreamer
 PREFERRED_VERSION_libgoo =		"5.i3.4"
@@ -213,7 +213,7 @@ PREFERRED_VERSION_gst-pyapps =		"5.I3.2"
 
 # connectivity
 SRCREV_pn-wilink = "09617c8c063973bd9df1988f03fddb04ccdec9b2"
-PREFERRED_VERSION_wilink-firmware =    "1.2"
+PREFERRED_VERSION_wilink-firmware =    	"1.2"
 PREFERRED_VERSION_btfm = 		"23.I3.4"
 PREFERRED_VERSION_kfmapp = 		"23.I3.4"
 PREFERRED_VERSION_gps-navilink =	"23.17.0"
@@ -245,7 +245,7 @@ PREFERRED_VERSION_libmms =		"0.4"
 PREFERRED_VERSION_sysvinit =		"2.86"
 
 # toolchain
-PREFERRED_VERSION_external-csl-toolchain =	"2008q3-72"
+PREFERRED_VERSION_external-csl-toolchain = "2008q3-72"
 
 # test
 PREFERRED_VERSION_cheese	=	"2.24.3"
