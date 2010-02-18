@@ -11,7 +11,7 @@ DEPENDS = "baseimage-avsync \
    baseimage-make-system \
    baseimage-utils \
    baseimage-masterconfig \
-   tidspbridge-vgpop \
+   tisocketnode-vgpop \
    tidspbridge-samples-dsp \
    "
 FILES_${PN}="\
