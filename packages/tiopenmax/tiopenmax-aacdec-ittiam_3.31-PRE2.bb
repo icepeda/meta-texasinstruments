@@ -1,12 +1,14 @@
-DESCRIPTION = "Texas Instruments OpenMAX IL AV Play Test Application."
-DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager tiopenmax-postproc tiopenmax-videodec tiopenmax-nbamrdec tiopenmax-aacdec tiopenmax-wbamrdec tiopenmax-wmadec"
+DESCRIPTION = "Texas Instruments OpenMAX IL AAC Decoder."
+DEPENDS = "tidspbridge-lib tiopenmax-core tiopenmax-lcml tiopenmax-rmproxy tiopenmax-resourcemanager tiopenmax-audiomanager tiopenmax-perf"
 PR = "r0"
 PACKAGES = "${PN}-dbg ${PN}-patterns ${PN}-dev ${PN}"
 
 require tiopenmax-cspec-${PV}.inc
 
 CCASE_PATHFETCH = "\
-	/vobs/wtbu/OMAPSW_MPU/linux/application/src/openmax_il/avplay \
+	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/aac_dec_ittiam \
+	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/aac_dec/inc/TIDspOmx.h \
+	/vobs/wtbu/OMAPSW_MPU/linux/audio/src/openmax_il/aac_enc/inc/TIDspOmx.h \
 	/vobs/wtbu/OMAPSW_MPU/linux/Makefile \
 	/vobs/wtbu/OMAPSW_MPU/linux/Master.mk \
 	"
@@ -14,48 +16,50 @@ CCASE_PATHCOMPONENTS = 3
 CCASE_PATHCOMPONENT = "linux"
 
 SRC_URI = "\
-	file://23.16-avplaynocore.patch;patch=1 \
-	file://remove-rarv.patch;patch=1 \
+#	file://23.14-aacdectestnocore.patch;patch=1 \
 	${@base_contains("DISTRO_FEATURES", "testpatterns", "", "file://remove-patterns.patch;patch=1", d)} \
 	"
 
 inherit ccasefetch
 
 do_compile_prepend() {
-	install -d ${D}/usr/omx
+	install -d ${D}/usr/omx/patterns
 	install -d ${D}/usr/lib
 	install -d ${D}/usr/bin
 }
 
 do_compile() {
-	cd ${S}/application/src/openmax_il/avplay
+	cd ${S}/audio/src/openmax_il/aac_dec_ittiam
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
 		BRIDGEINCLUDEDIR=${STAGING_INCDIR}/dspbridge BRIDGELIBDIR=${STAGING_LIBDIR} \
 		TARGETDIR=${D}/usr OMXTESTDIR=${D}${bindir} OMXROOT=${S} OMXLIBDIR=${STAGING_LIBDIR} \
+		OMX_PERF_INSTRUMENTATION=1 OMX_PERF_CUSTOMIZABLE=1 \
 		OMXINCLUDEDIR=${STAGING_INCDIR}/omx \
 		all
 }
 
 do_install() {
-	cd ${S}/application/src/openmax_il/avplay
+	cd ${S}/audio/src/openmax_il/aac_dec_ittiam
 	oe_runmake \
 		PREFIX=${D}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
 		BRIDGEINCLUDEDIR=${STAGING_INCDIR}/dspbridge BRIDGELIBDIR=${STAGING_LIBDIR} \
 		TARGETDIR=${D}/usr OMXTESTDIR=${D}${bindir} OMXROOT=${S} \
+		OMX_PERF_INSTRUMENTATION=1 OMX_PERF_CUSTOMIZABLE=1 \
 		SYSTEMINCLUDEDIR=${D}/usr/include/omx \
 		install
 }
 
 do_stage() {
-	cd ${S}/application/src/openmax_il/avplay
+	cd ${S}/audio/src/openmax_il/aac_dec_ittiam
 	oe_runmake \
 		PREFIX=${STAGING_DIR_TARGET}/usr PKGDIR=${S} \
 		CROSS=${AR%-*}- \
 		BRIDGEINCLUDEDIR=${STAGING_INCDIR}/dspbridge BRIDGELIBDIR=${STAGING_LIBDIR} \
 		TARGETDIR=${STAGING_DIR_TARGET}/usr OMXTESTDIR=${STAGING_BINDIR} OMXROOT=${S} \
+		OMX_PERF_INSTRUMENTATION=1 OMX_PERF_CUSTOMIZABLE=1 \
 		SYSTEMINCLUDEDIR=${STAGING_INCDIR}/omx \
 		install
 }
@@ -75,7 +79,7 @@ FILES_${PN}-dbg = "\
 	"
 
 FILES_${PN}-dev = "\
-	/usr/include/omx \
+	/usr/include \
 	"
 
 do_stage_rm_omxdir() {
@@ -85,9 +89,7 @@ do_stage_rm_omxdir() {
 
 do_install_cleanup() {
 	# move test files out of /usr/bin/ to /usr/omx only if test patterns exist
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/video_decoder.* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/pinball_*.length ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
-	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/monster_*.length ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
+	${@base_contains("DISTRO_FEATURES", "testpatterns", "mv ${D}${bindir}/audio_decoder.aac* ${D}/usr/omx/patterns", "echo nothing to do here!", d)}
 }
 
 addtask install_cleanup after do_install before do_package
