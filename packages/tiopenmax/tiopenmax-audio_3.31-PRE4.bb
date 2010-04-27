@@ -19,31 +19,11 @@ SRC_URI = "\
 	file://23.14-aacdecnocore.patch;patch=1 \
 	file://23.14-aacdectestnocore.patch;patch=1 \
 	file://23.14-aacencnocore.patch;patch=1 \
-   	file://23.14-aacenctestnocore.patch;patch=1 \
-	file://23.14-armaacdecnocore.patch;patch=1 \
-	file://23.14-armaacdectestnocore.patch;patch=1 \
-	file://23.14-armaacencnocore.patch;patch=1 \
-	file://23.14-armaacencnoincinstall.patch;patch=1 \
+  	file://23.14-aacenctestnocore.patch;patch=1 \
 	file://23.14-g711decnocore.patch;patch=1 \
 	file://23.14-g711decnoincinstall.patch;patch=1 \
 	file://23.13-g711encnocore.patch;patch=1 \
 	file://23.13-g711encnoincinstall.patch;patch=1 \
-	file://23.14-g722decnocore.patch;patch=1 \
-	file://23.14-g722decnoincinstall.patch;patch=1 \
-	file://23.14-g722encnocore.patch;patch=1 \
-	file://23.14-g722encnoincinstall.patch;patch=1 \
-	file://23.14-g723decnocore.patch;patch=1 \
-	file://23.14-g723decnoincinstall.patch;patch=1 \
-	file://23.14-g723encnocore.patch;patch=1 \
-	file://23.14-g723encnoincinstall.patch;patch=1 \
-	file://23.14-g726decnocore.patch;patch=1 \
-	file://23.14-g726decnoincinstall.patch;patch=1 \
-	file://23.14-g726encnocore.patch;patch=1 \
-	file://23.14-g726encnoincinstall.patch;patch=1 \
-	file://23.14-g729decnocore.patch;patch=1 \
-	file://23.14-g729decnoincinstall.patch;patch=1 \
-	file://23.14-g729encnocore.patch;patch=1 \
-	file://23.14-g729encnoincinstall.patch;patch=1 \
 	file://23.14-gsmfrdecnocore.patch;patch=1 \
 	file://23.14-gsmfrdectestnocore.patch;patch=1 \
 	file://23.14-gsmfrencnocore.patch;patch=1 \
@@ -52,10 +32,6 @@ SRC_URI = "\
 	file://23.14-gsmhrdectestnocore.patch;patch=1 \
 	file://23.14-gsmhrencnocore.patch;patch=1 \
 	file://23.14-gsmhrenctestnocore.patch;patch=1 \
-	file://23.14-ilbcdecnocore.patch;patch=1 \
-	file://23.14-ilbcdectestnocore.patch;patch=1 \
-	file://23.14-ilbcencnocore.patch;patch=1 \
-	file://23.14-ilbcencnoincinstall.patch;patch=1 \
 	file://23.14-imaadpcmdecnocore.patch;patch=1 \
 	file://23.14-imaadpcmdectestnocore.patch;patch=1 \
 	file://23.14-imaadpcmencnocore.patch;patch=1 \
@@ -101,14 +77,13 @@ do_compile() {
 		TARGETDIR=${D}/usr OMXTESTDIR=${D}${bindir} OMXROOT=${S} OMXLIBDIR=${STAGING_LIBDIR} \
         OMX_PERF_INSTRUMENTATION=1 OMX_PERF_CUSTOMIZABLE=1 \
         OMXINCLUDEDIR=${STAGING_INCDIR}/omx \
-		aac_dec aac_dec_ittiam aac_enc armaac_dec armaac_enc g711_dec g711_enc g722_dec g722_enc g723_dec g723_enc g726_dec g726_enc \
-		g729_dec g729_enc gsmfr_dec gsmfr_enc gsmhr_dec gsmhr_enc ilbc_dec ilbc_enc imaadpcm_dec imaadpcm_enc mp3_dec \
+		aac_dec aac_dec_ittiam aac_enc g711_dec g711_enc gsmfr_dec gsmfr_enc gsmhr_dec gsmhr_enc imaadpcm_dec imaadpcm_enc mp3_dec \
 		nbamr_dec nbamr_enc pcm_dec pcm_enc wbamr_dec wbamr_enc wma_dec
 	kwinject --config /data/apps/kw-server/config/kwfilter.conf -t ${HOME}/Documents/Klockworks/Audio_TRACE.tpl \
 		-o ${HOME}/Documents/Klockworks/Audio_BSPEC.tpl
 	kwbuildproject ${HOME}/Documents/Klockworks/Audio_BSPEC.tpl --tables-directory ${HOME}/Documents/Klockworks/Audio_TABLES \
 		--license-host flames-usa4.sc.ti.com --license-port 27005
-	kwadmin --host klocwork01.dal.design.ti.com --port 1116 delete-build WS_3630_OMX_Audio_Linux_23_Inc3 3630_OMX_Audio_Linux_23_Inc3_5
+	kwadmin --host klocwork01.dal.design.ti.com --port 1116 delete-build WS_3630_OMX_Audio_Linux_23_Inc3 3630_OMX_Audio_Linux_23_Inc3_6
 	kwadmin --host klocwork01.dal.design.ti.com --port 1116 --verbose load WS_3630_OMX_Audio_Linux_23_Inc3 \
 		${HOME}/Documents/Klockworks/Audio_TABLES --copy-sources --name 3630_OMX_Audio_Linux_23_Inc3_6
 }
