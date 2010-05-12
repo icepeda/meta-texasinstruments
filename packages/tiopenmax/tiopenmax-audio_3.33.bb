@@ -83,9 +83,9 @@ do_compile() {
 		-o ${HOME}/Documents/Klockworks/Audio_BSPEC.tpl
 	kwbuildproject ${HOME}/Documents/Klockworks/Audio_BSPEC.tpl --tables-directory ${HOME}/Documents/Klockworks/Audio_TABLES \
 		--license-host flames-usa4.sc.ti.com --license-port 27005
-	kwadmin --host klocwork01.dal.design.ti.com --port 1116 delete-build WS_3630_OMX_Audio_Linux_23_Inc3 3630_OMX_Audio_Linux_23_Inc3_6
+#	kwadmin --host klocwork01.dal.design.ti.com --port 1116 delete-build WS_3630_OMX_Audio_Linux_23_Inc3 3630_OMX_Audio_Linux_23_Inc3_7
 	kwadmin --host klocwork01.dal.design.ti.com --port 1116 --verbose load WS_3630_OMX_Audio_Linux_23_Inc3 \
-		${HOME}/Documents/Klockworks/Audio_TABLES --copy-sources --name 3630_OMX_Audio_Linux_23_Inc3_6
+		${HOME}/Documents/Klockworks/Audio_TABLES --copy-sources --name 3630_OMX_Audio_Linux_23_Inc3_7
 }
 
 FILES_${PN} = "\
